@@ -2,13 +2,17 @@
 <h2>All Movies</h2>
 
 <%#  Part 1: Start here... %>
-
+<style>
+th .hilite {
+  background-color: yellow;
+}
+</style>
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th>Movie Title</th>
+      <th class="<%= params[:sort] == "title" ? "hilite bg-warning" : ""%>"><%= link_to "Movie Title", :sort => "title"%> </th>
       <th>Rating</th>
-      <th>Release Date</th>
+      <th class="<%= params[:sort] == "release_date" ? "hilite bg-warning" : ""%>"><%= link_to "Release Date", :sort => "release_date", :class => @release_date_header%> </th>
       <th>More Info</th>
     </tr>
   </thead>
