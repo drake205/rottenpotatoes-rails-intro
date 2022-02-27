@@ -14,9 +14,9 @@
 <table class="table table-striped col-md-12" id="movies">
   <thead>
     <tr>
-      <th class="<%= params[:sort] == "title" ? "hilite bg-warning" : ""%>"><%= link_to "Movie Title", :sort => "title"%> </th>
+      <th class="<%= session[:sort] == "title" ? "hilite bg-warning" : ""%>"><%= link_to "Movie Title", :sort => "title"%> </th>
       <th>Rating</th>
-      <th class="<%= params[:sort] == "release_date" ? "hilite bg-warning" : ""%>"><%= link_to "Release Date", :sort => "release_date", :class => @release_date_header%> </th>
+      <th class="<%= session[:sort] == "release_date" ? "hilite bg-warning" : ""%>"><%= link_to "Release Date", :sort => "release_date", :class => @release_date_header%> </th>
       <th>More Info</th>
     </tr>
   </thead>
