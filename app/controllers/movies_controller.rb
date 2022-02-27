@@ -30,6 +30,9 @@ class MoviesController < ApplicationController
     elsif session[:ratings] != nil
       @ratings = session[:ratings]
       checked_ratings = @ratings.keys
+    else
+      @ratings = @all_ratings
+      checked_ratings = @all_ratings
     end
     
     #@ratings = params[:ratings]
